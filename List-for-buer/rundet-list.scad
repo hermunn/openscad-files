@@ -102,4 +102,4 @@ module ny_med_hull() {
 }
 
 translate([0,0,H_NEDE])
-    ny();
+    ny_med_hull();
