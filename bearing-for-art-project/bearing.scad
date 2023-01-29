@@ -168,7 +168,7 @@ intersection(){
 				base_radius,
 				min_radius,
 				outer_radius,
-				half_thick_angle);		
+				half_thick_angle);
 			mirror([0,1])halftooth (
 				pitch_angle,
 				base_radius,

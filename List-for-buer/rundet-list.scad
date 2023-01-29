@@ -44,7 +44,7 @@ module ny() {
         rotate([-90,0,0])
             half_rounded(FULL_VIDDE, Z_TOT, TYKKING, EXTRA_R);
     // den boksen som går inni, under
-    translate([-INDRE_VIDDE/2,-EKSTRA_TYKKING,-H_NEDE-EXTRA_R]) 
+    translate([-INDRE_VIDDE/2,-EKSTRA_TYKKING,-H_NEDE-EXTRA_R])
         cube([INDRE_VIDDE,TYKKING+EKSTRA_TYKKING,H_NEDE+EXTRA_R]);
     // en bit på siden, positivt på x-aksen
     DX=INDRE_VIDDE/2+TRE_VIDDE;
@@ -69,7 +69,7 @@ module ny() {
 }
 
 module gammel() {
-    translate([-EKSTRA_TYKKING,-INDRE_VIDDE/2,-H_NEDE]) 
+    translate([-EKSTRA_TYKKING,-INDRE_VIDDE/2,-H_NEDE])
         cube([TYKKING+EKSTRA_TYKKING,INDRE_VIDDE,H_NEDE]);
     translate([0,-FULL_VIDDE/2,-H_NEDE])
         cube([TYKKING, FULL_VIDDE,H_NEDE+H_OPPE]);

@@ -17,7 +17,7 @@ nTwist=1;
 w=4.4;
 // width of the stick coming out of the motor, should be close to w/2
 MOTOR_HOLE_THICKNESS=2.5;
-// the diameter of the hole where the motor is attached 
+// the diameter of the hole where the motor is attached
 MOTOR_SCREW_DIAMETER=4;
 // center-center distance of the motor attachment holes
 MOTOR_SCREW_CENTER_DISTANCE=35;
@@ -212,7 +212,7 @@ intersection(){
 				base_radius,
 				min_radius,
 				outer_radius,
-				half_thick_angle);		
+				half_thick_angle);
 			mirror([0,1])halftooth (
 				pitch_angle,
 				base_radius,
