@@ -3,22 +3,23 @@ $fn=60;
 // konstanter / parametre
 
 TYKKING = 3; // hvor tykk er lista rundt trelista
-H_NEDE = 17; // høyde under "streken"
-H_OPPE = 17; // høyde over "streken"
+H_NEDE = 22; // høyde under "streken"
+H_OPPE = 22; // høyde over "streken"
 INDRE_VIDDE = 146;
 EKSTRA_TYKKING = 6;
 TRE_VIDDE = 15.8;
 TRE_DYBDE = 44.5;
-EKSTRA_INN_BAK = 1.5;
+EKSTRA_INN_BAK = TRE_VIDDE-1.5;
 EXTRA_R = 0.6;
 
 SKRUE_D=2.5;
 HODE_D=6;
 HODE_H=3;
-HODE_INN=1.5;
+HODE_INN=1.1;
 
 // avledede verdier
 FULL_VIDDE = INDRE_VIDDE + 2 * (TYKKING + TRE_VIDDE);
+SKRU_BASE_VIDDE = (INDRE_VIDDE + FULL_VIDDE) * 0.5;
 
 module half_rounded(a,b,h,r) {
     intersection() {
@@ -94,9 +95,9 @@ module skrue() {
 module ny_med_hull() {
     difference() {
         ny();
-        translate([INDRE_VIDDE/3,0,-H_NEDE/3])
+        translate([SKRU_BASE_VIDDE/3,0,-H_NEDE/3])
             skrue();
-        translate([-INDRE_VIDDE/3,0,-H_NEDE/3])
+        translate([-SKRU_BASE_VIDDE/3,0,-H_NEDE/3])
             skrue();
     }
 }
